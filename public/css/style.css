@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Amity Jack';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Amity Jack'), url('assets/fonts/Amity Jack.woff') format('woff');
+}
+@font-face {
+    font-family: 'Highway Gothic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/fonts/highway_gothic/HWYGEXPD.TTF') format('truetype');
+}
+:root{
+    --bg-color-1 : #0065FF;
+    --highlight-color-1 : #ED7739;
+    --highlight-color-2 : #E3F020;
+    --text-color-1 : #0F0F0F;
+    --text-color-2 : #E5E5E5;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* overflow-y: hidden; */
+    font-family: 'Helvetica';
+    
+}
+#mainDiv-1{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#main__titleContainer{
+    display: flex;
+    justify-content: center;
+}
+#main__title{
+    font-family: 'Highway Gothic';
+    /* letter-spacing: 30px; */
+    font-weight: lighter;
+    font-size: 1200%;
+    color: var(--bg-color-1);
+}
+.main__imgContainer{
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#earth{
+    width: 50rem;
+    z-index: 1;
+}
+#children{
+    position: absolute;
+    bottom: 0;
+}
+#main__ghostDiv{
+    width: 100vw;
+    height: 150vh;
+    background-color: none;
+}
+#mainDiv-2{
+    position: sticky;
+    top: 150vh;
+    left: 0;
+    width: 100vw;
+    /* height: 200vh; */
+    opacity: 100%;
+    background-color: var(--bg-color-1);
+}
+a{
+    text-decoration: unset;
+    color: unset;
+}
+
+/* HEADER STYLING */
+
+#main-header{
+    display: none;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color-1);
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    /* border-bottom: solid 2px #F8067B; */
+}
+
+.header-content{
+    font-family: 'Highway Gothic';
+    font-size: 170%;
+    font-weight: bold;
+    color: #69372C;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.header-content:hover {
+    background-color: #69372C;
+    color: #70b59d;
+}
+#merch-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+}
+
+#merch-header-title{
+    font-family: 'Highway Gothic';
+    font-size: 170%;
+    color: #020202;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+    border: solid 3px #020202;
+    border-radius: 50%;
+}
+#merch-header-title:hover{
+    background-color: #020202;
+    color: white;
+}
+#header-right-wrapper{
+    display: flex;
+
+}
+#main-video-wrapper{
+    /* padding: 100px; */
+    display: flex;
+    justify-content: center;
+    filter: hue-rotate(0deg);;
+}
+#main-video{
+    width: 100%;
+    pointer-events: none;
+    
+}
+#about-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0rem;
+    /* border-top: solid 2px #F8067B; */
+}
+#left-wrapper, #right-wrapper{
+    width: 50%;
+}
+#left-wrapper{
+    padding: 40px 0px;
+    transform: translateX(100%);
+}
+#right-wrapper{
+    border: solid 10px var(--text-color-2);
+    z-index: 1;
+    background-color: var(--bg-color-1);
+    padding: 50px;
+}
+.left-subtitle-wrapper{
+    background-color: var(--bg-color-1);
+    border: solid 10px var(--text-color-2);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    height: 300px;
+}
+.left-subtitle-plain, .left-subtitle-highlighted{
+    text-align: center;
+    font-family: 'Highway Gothic';
+    opacity: 100%;
+    font-size: 550%;
+    /* letter-spacing: 10px; */
+    font-weight: lighter;
+    /* color :rgb(112, 181, 157) */
+    /* transition: all 0.1s ease-in-out; */
+}
+.hide{
+    opacity: 0%;
+}
+.left-subtitle-plain{
+    color: var(--text-color-2);
+}
+.left-subtitle-highlighted{
+    color: var(--highlight-color-1);
+}
+#left-down-arrow{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    transition: all 0.5s ease-in-out;
+}
+#left-down-arrow svg{
+    height: 300px;
+    fill: #E3F020;
+}
+
+#right-subtitle{
+    font-family: 'Highway Gothic';
+    font-weight: 100;
+    font-size: 450%;
+    color: var(--text-color-2);
+}
+#right-description-wrapper{
+    padding-top: 30px;
+
+}
+.right-description{
+    font-size: 120%;
+    font-weight: normal;
+    line-height: 150%;
+    color: var(--text-color-2);
+}
+
+.member-content-wrapper{
+    margin-top: 100px;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+
+}
+#member-reversed{
+    flex-direction: row-reverse;
+
+}
+.member-profile-img{
+    width: 30%;
+    height: 30%;
+}
+.member-description-wrapper{
+    padding: 0px 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 0%; */
+}
+.description-reversed{
+    align-items: flex-end;
+}
+.member-description-name{
+    font-family: 'Highway Gothic';
+    font-size: 400%;
+    color: var(--text-color-2);
+    font-weight: 100;
+}
+.member-description-info{
+    /* font-family: 'Gothic A1', sans-serif; */
+    padding-top: 10px;
+    font-size: 135%;
+    font-weight: lighter;
+    line-height: 150%;
+    letter-spacing: 1px;
+    word-break: keep-all;
+    color: var(--text-color-2);
+}
+.member-link-wrapper{
+    padding-top: 10px;
+}
+.member-link{
+    font-family: 'Highway Gothic';
+    border-radius: 50%;
+    border: solid 3px #E5E5E5;
+    padding: 10px 20px;
+    font-size: 150%;
+    font-weight: normal;
+    color: var(--text-color-2);
+    margin-right: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.member-link:hover{
+    color: var(--highlight-color-2);
+    border: solid 3px var(--highlight-color-2);
+    transform: rotate(30deg);
+}
+
+
+#works-wrapper{
+    background-color: var(--text-color-2);
+    position: static;
+
+
+}  
+
+#works-title-wrapper{
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color-2);
+    height: 90px;
+}
+#works-title-wrapper:nth-child(1){
+    overflow: hidden;
+    border-top: solid 2px var(--text-color-1);
+    border-bottom: solid 1px var(--text-color-1);
+}
+#works-title-wrapper:nth-child(2){
+    overflow: hidden;
+    border-top: solid 1px var(--text-color-1);
+    border-bottom: solid 2px var(--text-color-1);
+}
+.works-title-top, .works-title-bottom{
+    padding: 0px 50px;
+    /* width: 100%; */
+    /* height: 50%; */
+    font-family: 'Highway Gothic';
+    font-size: 500%;
+}
+.works-project-wrapper{
+    padding: 50px;
+}
+.works-project-img{
+    width: 500px;
+    height: 500px;
+}
+.works-project-title{
+    padding: 10px 0px;
+    font-family: 'Highway Gothic';
+    font-size: 400%;
+    color: var(--text-color-1);
+    font-weight: lighter;
+}
+.works-project-subtitle{
+    font-family: 'Highway Gothic';
+    font-size: 200%;
+    color: var(--text-color-1);
+
+}
+.works-project-description{
+    line-height: 150%;
+    padding-top: 10px;
+    font-size: 120%;
+    font-weight: normal;
+    word-break: keep-all;
+    color: var(--text-color-1);
+}
+.works-project-credit-list{
+    margin-top: 20px;
+}
+.works-project-credit{
+    font-family: 'Gothic A1', sans-serif;
+    line-height: 150%;
+    list-style-type : none;
+    font-size: 110%;
+    font-weight: lighter;
+    word-break: keep-all;
+    color: var(--text-color-1);
+}
+.works-project-links-wrapper{
+    padding-top: 30px;
+}
+.fa-brands{
+    font-size: 200%;
+    margin-right: 10px;
+    color: var(--text-color-1);
+}
+.fa-brands:hover{
+    color: var(--text-color-1);
+}
+#footer{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    bottom: 0;
+}
+.footer-text{
+    padding-bottom: 10px;
+    font-size: 120%;
+    font-weight: lighter;
+}
+
+
+/* MERCH SECTION */
+#merch-title-wrapper{
+    padding: 30px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#merch-title{
+
+    font-family: 'Amity Jack';
+    font-size: 3000%;
+}
+.merch-ghost-wrapper{
+    height: 70vh;
+    width: 100%;
+}
+#merch-main-wrapper{
+    height: 150vh;
+    width: 100vw;
+    background-color: #E3F020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#merch-no-item-notice{
+    display: none;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 200%;
+}
+
+#merch-product-list{
+    padding-top: 100px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.merch-single-product-wrapper{
+    padding: 10px;
+    position: relative;
+}
+.merch-product-image{
+    width: 300px;
+    height: 300px;
+    cursor: grab;
+}
+.merch-product-image:hover{
+    transform: rotate(30deg);
+}
+
+.merch-product-info-wrapper{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    background-color: #CEB8FF;
+    
+}
+.merch-product-info-esc-btn{
+    position: absolute;
+    display: inline-block;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 150%;
+    font-weight: lighter;
+    border: solid 1px #020202;
+    border-radius: 50%;
+    padding: 0px 10px;
+    left: 0%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+.merch-product-title{
+    font-family: 'Highway Gothic';
+    width: 100%;
+    display: block;
+    font-size: 150%;
+    text-align: center;
+}
+
+.merch-product-size-wrapper{
+    display: flex;
+    align-items: center;
+}
+.merch-product-size{
+    font-family: 'Highway Gothic';
+    display: inline-block;
+    padding: 10px;
+    cursor: grab;
+}
+.merch-product-size:hover{
+    background-color: #E3F020;
+}
+.merch-product-info-image{
+    width: 300px;
+    height: 300px;
+}
+#merch-product-info-ghost-wrapper{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 150vh;
+    background-color: #020202;
+    opacity: 30%;
+}

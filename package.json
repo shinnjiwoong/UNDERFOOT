@@ -4,12 +4,16 @@
   "description": "The Official Webpage for UNDERFOOT Collectives.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Jiwoong Shinn",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
-  }
+    "express": "^4.18.2",
+    "gh-pages": "^5.0.0"
+  },
+  "homepage" : "https://shinnjiwoong.github.io/UNDERFOOT/"
 }

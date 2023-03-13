@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -18,15 +18,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RYKYTI</title>
+    <title>UNDERFOOT</title>
   </head>
   <body>
     <div id="mainDiv-1">
       <div id="main__titleContainer">
         <p id="main__title">UNDERFOOT</p>
         <div class="main__imgContainer">
-          <img src="assets/img/children.png" alt="" id="children" />
-          <img src="assets/img/rykyti__earth.png" alt="" id="earth" />
+          <img src="public/img/children.png" alt="" id="children" />
+          <img src="public/img/rykyti__earth.png" alt="" id="earth" />
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
       </header>
       <div id="main-video-wrapper">
         <video id="main-video" autoplay muted loop>
-          <source src="assets/vid/KASINAxCASPER.mp4" type="video/mp4" />
+          <source src="public/vid/KASINAxCASPER.mp4" type="video/mp4" />
         </video>
       </div>
       <div id="about-wrapper">
@@ -57,14 +57,6 @@
           <div class="left-subtitle-wrapper">
             <p class="left-subtitle-plain">MEMBERS</p>
           </div>
-          <!-- <div class="left-subtitle-wrapper">
-            <p class="left-subtitle-plain">KOO</p>
-            <p class="left-subtitle-highlighted">KY</p>
-          </div>
-          <div class="left-subtitle-wrapper">
-            <p class="left-subtitle-plain">MON</p>
-            <p class="left-subtitle-highlighted">TI</p>
-          </div> -->
         </div>
         <div id="right-wrapper">
           <div id="right-contents-wrapper">
@@ -83,7 +75,7 @@
       <div id="members-wrapper">
         <div class="member-content-wrapper">
           <img
-            src="assets/img/MINDCRAFT.jpeg"
+            src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
@@ -103,7 +95,7 @@
         </div>
         <div id="member-reversed" class="member-content-wrapper">
           <img
-            src="assets/img/MINDCRAFT.jpeg"
+            src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
@@ -120,7 +112,7 @@
         </div>
         <div class="member-content-wrapper">
           <img
-            src="assets/img/MINDCRAFT.jpeg"
+            src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
@@ -177,7 +169,7 @@
         <div class="works-project-wrapper">
           <div class="works-project-sourceWrapper">
             <img
-              src="assets/img/Wolf Kooky - REM (2021).jpeg"
+              src="public/img/Wolf Kooky - REM (2021).jpeg"
               alt=""
               class="works-project-img"
             />
@@ -212,7 +204,7 @@
         <div class="works-project-wrapper">
           <div class="works-project-sourceWrapper">
             <img
-              src="assets/img/NBTAPES_CV3.png"
+              src="public/img/NBTAPES_CV3.png"
               alt=""
               class="works-project-img"
             />
@@ -248,6 +240,93 @@
     <div id="footer">
       <p class="footer-text">RYKYTI 2023</p>
     </div>
-    <script src="app.js"></script>
+    <script>
+        // DOM SELECTORS
+      const mainDiv__1 = document.getElementById('mainDiv-1');
+      const mainDiv__2 = document.getElementById('mainDiv-2');
+      const children = document.getElementById('children');
+      const mainHeader = document.getElementById('main-header');
+      const headerContents = document.querySelectorAll('.header-content');
+      const headerAbout = document.getElementById('header-about');
+      const headerWorks = document.getElementById('header-works')
+      const leftSubtitlePlain = document.querySelectorAll('.left-subtitle-highlighted');
+      const mainVideoWrapper = document.getElementById('main-video-wrapper')
+      const aboutWrapper = document.getElementById('about-wrapper');
+      const aboutLeftWrapper = document.getElementById('left-wrapper');
+      const aboutDownArrow = document.getElementById('left-down-arrow');
+      const worksWrapper = document.getElementById('works-wrapper');
+      const worksTitleWrapper = document.getElementById('works-wrapper');
+      const worksTitleTop = document.querySelectorAll('.works-title-top');
+      const worksTitleBottom = document.querySelectorAll('.works-title-bottom');
+
+      window.addEventListener('scroll', ()=>{
+          const divTwoRect = mainDiv__2.getBoundingClientRect();
+          const mainVideoRect = mainVideoWrapper.getBoundingClientRect();
+          const aboutWrapperRect = aboutWrapper.getBoundingClientRect();
+          const worksWrapperRect = worksWrapper.getBoundingClientRect();
+          const worksTitleWrapperRect = worksTitleWrapper.getBoundingClientRect();
+
+          if(window.scrollY < 385){
+              children.style.transform = `translateY(${-window.scrollY}px)`
+          }
+          if(divTwoRect.top <= 0){
+              mainHeader.style.position = 'fixed'
+              mainHeader.style.opacity = '100%'
+              mainHeader.style.display = 'flex'
+          }else{
+              mainHeader.style.opacity = '0%'
+              mainHeader.style.position = 'static'
+              mainHeader.style.display = 'none'
+          }
+
+          mainVideoWrapper.style.filter = `hue-rotate(${Math.abs(mainVideoRect.top/mainVideoRect.height*360)}deg)`
+
+          // blur(${Math.abs(mainVideoRect.top/mainVideoRect.height*10)}px) 
+          if(aboutWrapperRect.top <= 0 && worksWrapperRect.top > 0){
+              mainHeader.style.zIndex = '2'
+              // mainHeader.style.backgroundColor = '#ECECEC';
+              headerAbout.style.textDecoration = 'underline 2px #E3F020';
+              headerWorks.style.textDecoration = 'none';
+              headerContents.forEach((e)=>{
+                  e.style.color = '#E3F020';
+              })
+          }else if(aboutWrapperRect.top < 0 && worksWrapperRect.top <= 0){
+              mainHeader.style.zIndex = '2'
+              headerAbout.style.textDecoration = 'none';
+              headerWorks.style.textDecoration = 'underline 2px #0065FF';
+              // mainHeader.style.backgroundColor = '#ECECEC';
+              console.log(headerContents.length)
+              headerContents.forEach((e)=>{
+                  e.style.color = '#0065FF';
+              })
+          }else{
+              mainHeader.style.zIndex = '-1'
+              headerWorks.style.textDecoration = 'none';
+              headerAbout.style.textDecoration = 'none';
+          }
+          
+          if(aboutWrapperRect.top <= window.innerHeight && aboutWrapperRect.top > 0){
+              aboutLeftWrapper.style.transform = `translateX(${aboutWrapperRect.top/window.innerHeight*100}%)`
+              aboutDownArrow.style.transform = `translate(-50%, 0%)`
+          }
+          if(aboutWrapperRect.top < 0){
+              aboutDownArrow.style.transform = `translate(-50%, 100%)`
+          }
+          if(worksTitleWrapperRect.top <= window.innerHeight){
+              worksTitleTop.forEach((e)=>{
+                  e.style.transform = `translateX(-${worksTitleWrapperRect.top/window.innerHeight*100}%)`
+              })
+              worksTitleBottom.forEach((e)=>{
+                  e.style.transform = `translateX(${worksTitleWrapperRect.top/window.innerHeight*2*100}%)`
+              })
+          }
+      })
+
+      setInterval(()=>{
+          leftSubtitlePlain.forEach((e)=>{
+              e.classList.toggle('hide');
+          })
+      }, 1000)
+    </script>
   </body>
 </html>
