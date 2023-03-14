@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch!</title>
+  </head>
+  <body>
+    <header id="merch-header">
+      <a href="/" id="merch-header-title">HOME</a>
+    </header>
+
+    <div id="merch-title-wrapper">
+      <p id="merch-title">MERCH</p>
+    </div>
+    <div class="merch-ghost-wrapper"></div>
+    <main>
+      <section id="merch-main-wrapper">
+        <p id="merch-no-item-notice">아직 준비된 상품이 없습니다!</p>
+        <div id="merch-product-list">
+          <div class="merch-single-product-wrapper">
+            <img
+              src="./assets/img/tshirt_1.jpeg"
+              alt=""
+              class="merch-product-image"
+            />
+            <!-- <div class="merch-product-info-wrapper">
+              <p class="merch-product-title">t-shirt</p>
+              <p class="merch-product-size-wrapper">
+                <a class="merch-product-size">S</a>
+                <a class="merch-product-size">M</a>
+                <a class="merch-product-size">L</a>
+              </p>
+            </div> -->
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/tshirt_2.jpeg"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/tshirt_3.jpeg"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/tshirt_4.png"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/tshirt-5.jpeg"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/hoodie-1.webp"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/tshirt_2.webp"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+          <div class="merch-single-product-wrapper">
+            <img
+              src="assets/img/hoodie_1.webp"
+              alt=""
+              class="merch-product-image"
+            />
+          </div>
+        </div>
+        <div id="merch-product-info-ghost-wrapper"></div>
+        <div class="merch-product-info-wrapper">
+          <!-- <p class="merch-product-info-esc-btn">X</p> -->
+          <div id="merch-product-info-image-wrapper">
+            <img
+              src="assets/img/tshirt_1.jpeg"
+              alt=""
+              class="merch-product-info-image"
+            />
+          </div>
+          <p class="merch-product-title">T-shirt</p>
+          <div class="merch-product-size-wrapper">
+            <p class="merch-product-size">S</p>
+            <p class="merch-product-size">M</p>
+            <p class="merch-product-size">L</p>
+          </div>
+        </div>
+      </section>
+      <script>
+        const productImageList = document.querySelectorAll(
+          ".merch-product-image"
+        );
+        const merchProductInfoGhostWrapper = document.getElementById(
+          "merch-product-info-ghost-wrapper"
+        );
+        const merchProductInfoWrapper = document.querySelector(
+          ".merch-product-info-wrapper"
+        );
+
+        productImageList.forEach((e) => {
+          e.addEventListener("click", () => {
+            merchProductInfoGhostWrapper.style.display = "block";
+            merchProductInfoWrapper.style.display = "flex";
+          });
+        });
+
+        merchProductInfoGhostWrapper.addEventListener("click", () => {
+          merchProductInfoWrapper.style.display = "none";
+          merchProductInfoGhostWrapper.style.display = "none";
+        });
+      </script>
+    </main>
+  </body>
+</html>

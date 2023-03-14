@@ -41,12 +41,12 @@
           <a href="#works-wrapper" id="header-works" class="header-content"
             >WORKS</a
           >
-          <a href="merch.html" class="header-content">MERCH</a>
+          <a onclick="goToMerch()" class="header-content">MERCH</a>
         </div>
       </header>
       <div id="main-video-wrapper">
         <video id="main-video" autoplay muted loop>
-          <source src="public/vid/KASINAxCASPER.mp4" type="video/mp4" />
+          <source src="/public/vid/headerVideo.mp4" type="video/mp4" />
         </video>
       </div>
       <div id="about-wrapper">
@@ -74,11 +74,13 @@
       </div>
       <div id="members-wrapper">
         <div class="member-content-wrapper">
-          <img
+          <div class="member-img-wrapper">
+            <img
             src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
+          </div>
           <div class="member-description-wrapper">
             <p class="member-description-name">Cary Nam</p>
             <p class="member-description-info">
@@ -93,13 +95,16 @@
             </div>
           </div>
         </div>
-        <div id="member-reversed" class="member-content-wrapper">
-          <img
+        <div class="member-content-wrapper">
+          <div class="member-img-wrapper">
+            <img
             src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
-          <div class="member-description-wrapper description-reversed">
+          </div>
+          
+          <div class="member-description-wrapper">
             <p class="member-description-name">Wolf Kooky</p>
             <p class="member-description-info">
               Wolf Kooky는 음악, 패션을 포함한 다양한 분야에서 활동중이다. <br>현재 한국의 언더그라운드 문화를 선도하는 팀 BASECREAM을 이끌어가며 다양한 컨텐츠를 만들어가고 있다. 
@@ -111,11 +116,13 @@
           </div>
         </div>
         <div class="member-content-wrapper">
-          <img
+          <div class="member-img-wrapper">
+            <img
             src="public/img/MINDCRAFT.jpeg"
             alt=""
             class="member-profile-img"
           />
+          </div>
           <div class="member-description-wrapper">
             <p class="member-description-name">Monti Kayoti</p>
             <p class="member-description-info">
@@ -167,72 +174,198 @@
           <p class="works-title-bottom">WORKS</p>
         </div>
         <div class="works-project-wrapper">
-          <div class="works-project-sourceWrapper">
-            <img
-              src="public/img/Wolf Kooky - REM (2021).jpeg"
-              alt=""
-              class="works-project-img"
-            />
-          </div>
           <div class="works-project-infoWrapper">
-            <p class="works-project-title">REM</p>
-            <div class="works-project-description-wrapper">
-              <p class="works-project-subtitle">EP, 2021</p>
-              <p class="works-project-description">
-                [REM]은 90년대 붐뱁음악에 대한 기억을 가지고 제작한 RYKYTI의
-                첫번째 프로젝트이다. <br />REM이 의미하는 것은 렘수면의 REM일
-                수도, 혹은 Reminiscence의 REM일 수도 있다. <br />붐뱁을 추억하며
-                제작한 5곡의 음악과 함께 애니메이션을 제작하였다. <br />피쳐링에
-                국내 RnB 아티스트 니아 (Nieah)가 함께 해주었다. <br>
-                <ul class="works-project-credit-list">
-                  <li class="works-project-credit">Visual Production : Cary Nam</li>
-                  <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah (on ALRIGHT)</li>
-                  <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                </ul>
-              </p>
+            <div class="works-project-header-wrapper">
+              <p class="works-project-title">NO BOUNDARY</p>
+              <p class="works-project-title">EP, 2023</p>
             </div>
-            <div class="works-project-links-wrapper">
-              <a href="" class="works-project-link"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-              <a href="" class="works-project-link"
-                ><i class="fa-brands fa-spotify"></i
-              ></a>
+            <div class="works-project-sourceWrapper">
+              <img
+                src="public/img/NBTAPES_CV3.png"
+                alt=""
+                class="works-project-img"
+              />
+              <div class="works-project-description-wrapper">
+                <p class="works-project-description">
+                  NO BOUNDARY는 '날 것'이라는 키워드를 가지고 작업한 프로젝트이다.
+                  <br />세 멤버는 하루의 송캠프를 통해 녹음 및 데모작업과 비주얼
+                  컨셉을 만들고, 이를 기반으로 프로젝트를 완성시켰다. <br />곡의
+                  피쳐링으로 Lil Poet, Basshammer, 그리고 Kaeoh가 함께 해주었다. <br>
+                  <ul class="works-project-credit-list">
+                    <li class="works-project-credit">Visual Production : Cary Nam</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh (on ENUFF) </li>
+                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                  </ul>
+                </p>
+                <div class="works-project-links-wrapper">
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-spotify"></i
+                  ></a>
+                </div>
+              </div>
+
             </div>
+            
+            
           </div>
         </div>
         <div class="works-project-wrapper">
-          <div class="works-project-sourceWrapper">
-            <img
-              src="public/img/NBTAPES_CV3.png"
-              alt=""
-              class="works-project-img"
-            />
-          </div>
           <div class="works-project-infoWrapper">
-            <p class="works-project-title">NO BOUNDARY</p>
-            <div class="works-project-description-wrapper">
-              <p class="works-project-subtitle">EP, 2023</p>
-              <p class="works-project-description">
-                NO BOUNDARY는 '날 것'이라는 키워드를 가지고 작업한 프로젝트이다.
-                <br />세 멤버는 하루의 송캠프를 통해 녹음 및 데모작업과 비주얼
-                컨셉을 만들고, 이를 기반으로 프로젝트를 완성시켰다. <br />곡의
-                피쳐링으로 Lil Poet, Basshammer, 그리고 Kaeoh가 함께 해주었다. <br>
-                <ul class="works-project-credit-list">
-                  <li class="works-project-credit">Visual Production : Cary Nam</li>
-                  <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh (on ENUFF) </li>
-                  <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                </ul>
-              </p>
+            <div class="works-project-header-wrapper">
+              <p class="works-project-title">REM</p>
+              <p class="works-project-title">EP, 2021</p>
             </div>
-            <div class="works-project-links-wrapper">
-              <a href="" class="works-project-link"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-              <a href="" class="works-project-link"
-                ><i class="fa-brands fa-spotify"></i
-              ></a>
+            <div class="works-project-sourceWrapper">
+              <img
+                src="public/img/Wolf Kooky - REM (2021).jpeg"
+                alt=""
+                class="works-project-img"
+              />
+              <div class="works-project-description-wrapper">
+                <p class="works-project-description">
+                  [REM]은 90년대 붐뱁음악에 대한 기억을 가지고 제작한 RYKYTI의
+                첫번째 프로젝트이다. <br />붐뱁을 추억하며
+                제작한 5곡의 음악과 함께 애니메이션을 제작하였다. <br />피쳐링에
+                국내 RnB 아티스트 니아 (Nieah)가 함께 해주었다. <br>
+                  <ul class="works-project-credit-list">
+                    <li class="works-project-credit">Visual Production : Cary Nam</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah (on ALRIGHT)</li>
+                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                  </ul>
+                </p>
+                <div class="works-project-links-wrapper">
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-spotify"></i
+                  ></a>
+                </div>
+              </div>
+
             </div>
+            
+            
+          </div>
+        </div>
+        <div class="works-project-wrapper">
+          <div class="works-project-infoWrapper">
+            <div class="works-project-header-wrapper">
+              <p class="works-project-title">HYUNDAI CASPER x Kasina</p>
+              <p class="works-project-title">Campaign, 2022</p>
+            </div>
+            <div class="works-project-sourceWrapper">
+              <img
+                src="public/img/NBTAPES_CV3.png"
+                alt=""
+                class="works-project-img"
+              />
+              <div class="works-project-description-wrapper">
+                <p class="works-project-description">
+                  NO BOUNDARY는 '날 것'이라는 키워드를 가지고 작업한 프로젝트이다.
+                  <br />세 멤버는 하루의 송캠프를 통해 녹음 및 데모작업과 비주얼
+                  컨셉을 만들고, 이를 기반으로 프로젝트를 완성시켰다. <br />곡의
+                  피쳐링으로 Lil Poet, Basshammer, 그리고 Kaeoh가 함께 해주었다. <br>
+                  <ul class="works-project-credit-list">
+                    <li class="works-project-credit">Visual Production : Cary Nam</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh (on ENUFF) </li>
+                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                  </ul>
+                </p>
+                <div class="works-project-links-wrapper">
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-spotify"></i
+                  ></a>
+                </div>
+              </div>
+
+            </div>
+            
+            
+          </div>
+        </div>
+        <div class="works-project-wrapper">
+          <div class="works-project-infoWrapper">
+            <div class="works-project-header-wrapper">
+              <p class="works-project-title">Kasina Kaffe</p>
+              <p class="works-project-title">Campaign, 2022</p>
+            </div>
+            <div class="works-project-sourceWrapper">
+              <img
+                src="public/img/NBTAPES_CV3.png"
+                alt=""
+                class="works-project-img"
+              />
+              <div class="works-project-description-wrapper">
+                <p class="works-project-description">
+                  NO BOUNDARY는 '날 것'이라는 키워드를 가지고 작업한 프로젝트이다.
+                  <br />세 멤버는 하루의 송캠프를 통해 녹음 및 데모작업과 비주얼
+                  컨셉을 만들고, 이를 기반으로 프로젝트를 완성시켰다. <br />곡의
+                  피쳐링으로 Lil Poet, Basshammer, 그리고 Kaeoh가 함께 해주었다. <br>
+                  <ul class="works-project-credit-list">
+                    <li class="works-project-credit">Visual Production : Cary Nam</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh (on ENUFF) </li>
+                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                  </ul>
+                </p>
+                <div class="works-project-links-wrapper">
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-spotify"></i
+                  ></a>
+                </div>
+              </div>
+
+            </div>
+            
+            
+          </div>
+        </div>
+        <div class="works-project-wrapper">
+          <div class="works-project-infoWrapper">
+            <div class="works-project-header-wrapper">
+              <p class="works-project-title">Kasina Seongsu</p>
+              <p class="works-project-title">Campaign, 2022</p>
+            </div>
+            <div class="works-project-sourceWrapper">
+              <img
+                src="public/img/NBTAPES_CV3.png"
+                alt=""
+                class="works-project-img"
+              />
+              <div class="works-project-description-wrapper">
+                <p class="works-project-description">
+                  NO BOUNDARY는 '날 것'이라는 키워드를 가지고 작업한 프로젝트이다.
+                  <br />세 멤버는 하루의 송캠프를 통해 녹음 및 데모작업과 비주얼
+                  컨셉을 만들고, 이를 기반으로 프로젝트를 완성시켰다. <br />곡의
+                  피쳐링으로 Lil Poet, Basshammer, 그리고 Kaeoh가 함께 해주었다. <br>
+                  <ul class="works-project-credit-list">
+                    <li class="works-project-credit">Visual Production : Cary Nam</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh (on ENUFF) </li>
+                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                  </ul>
+                </p>
+                <div class="works-project-links-wrapper">
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="" class="works-project-link"
+                    ><i class="fa-brands fa-spotify"></i
+                  ></a>
+                </div>
+              </div>
+
+            </div>
+            
+            
           </div>
         </div>
       </div>
@@ -258,7 +391,11 @@
       const worksTitleWrapper = document.getElementById('works-wrapper');
       const worksTitleTop = document.querySelectorAll('.works-title-top');
       const worksTitleBottom = document.querySelectorAll('.works-title-bottom');
+      const worksProjectHeader = document.querySelectorAll('.works-project-header-wrapper');
 
+      function goToMerch(){
+        location.href = "/merch"
+      }
       window.addEventListener('scroll', ()=>{
           const divTwoRect = mainDiv__2.getBoundingClientRect();
           const mainVideoRect = mainVideoWrapper.getBoundingClientRect();
@@ -322,6 +459,15 @@
           }
       })
 
+      let lastClicked = 0;
+
+      worksProjectHeader.forEach((e, i)=>{
+        e.addEventListener('click', ()=>{
+          worksProjectHeader[lastClicked].parentNode.parentNode.classList.remove('project-selected');
+          worksProjectHeader[i].parentNode.parentNode.classList.add('project-selected');
+          lastClicked = i;
+        })
+      })
       setInterval(()=>{
           leftSubtitlePlain.forEach((e)=>{
               e.classList.toggle('hide');

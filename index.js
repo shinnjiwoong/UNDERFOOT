@@ -9,7 +9,9 @@ app.use(express.static(__dirname + "/"))
 app.get('/', (req, res) => {
   res.render('mainPage', {})
 })
-
+app.get('/merch', (req, res) => {
+  res.render('merchPage', {})
+})
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

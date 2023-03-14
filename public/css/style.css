@@ -7,13 +7,19 @@
     font-family: 'Amity Jack';
     font-style: normal;
     font-weight: normal;
-    src: local('Amity Jack'), url('assets/fonts/Amity Jack.woff') format('woff');
+    src: local('Amity Jack'), url('/public/fonts/Amity Jack.woff') format('woff');
 }
 @font-face {
     font-family: 'Highway Gothic';
     font-style: normal;
     font-weight: normal;
     src: url('/public/fonts/highway_gothic/HWYGEXPD.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'Highway Gothic Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/fonts/highway_gothic/HWYGNRRW.TTF') format('truetype');
 }
 :root{
     --bg-color-1 : #0065FF;
@@ -232,12 +238,13 @@ a{
     line-height: 150%;
     color: var(--text-color-2);
 }
-
+#members-wrapper{
+    display: flex;
+}
 .member-content-wrapper{
     margin-top: 100px;
     width: 100%;
-    padding: 50px;
-    display: flex;
+    /* display: flex; */
 
 }
 #member-reversed{
@@ -245,15 +252,17 @@ a{
 
 }
 .member-profile-img{
-    width: 30%;
-    height: 30%;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
 }
 .member-description-wrapper{
-    padding: 0px 30px;
-    width: 50%;
+    padding: 0px 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     /* height: 0%; */
 }
 .description-reversed{
@@ -266,8 +275,9 @@ a{
     font-weight: 100;
 }
 .member-description-info{
+    display: none;
+    padding: 20px;
     /* font-family: 'Gothic A1', sans-serif; */
-    padding-top: 10px;
     font-size: 135%;
     font-weight: lighter;
     line-height: 150%;
@@ -276,7 +286,7 @@ a{
     color: var(--text-color-2);
 }
 .member-link-wrapper{
-    padding-top: 10px;
+    height: 100%;
 }
 .member-link{
     font-family: 'Highway Gothic';
@@ -300,7 +310,7 @@ a{
 #works-wrapper{
     background-color: var(--text-color-2);
     position: static;
-
+    position: relative;
 
 }  
 
@@ -320,7 +330,7 @@ a{
 #works-title-wrapper:nth-child(2){
     overflow: hidden;
     border-top: solid 1px var(--text-color-1);
-    border-bottom: solid 2px var(--text-color-1);
+    border-bottom: solid 1px var(--text-color-1);
 }
 .works-title-top, .works-title-bottom{
     padding: 0px 50px;
@@ -330,30 +340,56 @@ a{
     font-size: 500%;
 }
 .works-project-wrapper{
-    padding: 50px;
+    border-top: solid 2px var(--text-color-1);
+    height: 75px;
+    overflow-y: hidden;
+    transition: all 0.5s ease-in-out;
 }
-.works-project-img{
-    width: 500px;
-    height: 500px;
+.project-selected{
+    height: 600px;
+}
+.works-project-header-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px var(--text-color-1);
+    height: 75px;
+}
+.works-project-header-wrapper:hover{
+    background-color: #E3F020;
+    cursor: grab;
 }
 .works-project-title{
-    padding: 10px 0px;
-    font-family: 'Highway Gothic';
-    font-size: 400%;
+    padding: 10px 20px;
+    font-family: 'Highway Gothic Light';
+    font-size: 300%;
     color: var(--text-color-1);
     font-weight: lighter;
 }
 .works-project-subtitle{
     font-family: 'Highway Gothic';
-    font-size: 200%;
+    font-size: 400%;
     color: var(--text-color-1);
 
+}
+.works-project-sourceWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.works-project-img{
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
+.works-project-description-wrapper{
+    width: 600px;
+    margin: auto;
 }
 .works-project-description{
     line-height: 150%;
     padding-top: 10px;
-    font-size: 120%;
-    font-weight: normal;
+    font-size: 150%;
+    font-weight: lighter;
     word-break: keep-all;
     color: var(--text-color-1);
 }
@@ -378,7 +414,7 @@ a{
     color: var(--text-color-1);
 }
 .fa-brands:hover{
-    color: var(--text-color-1);
+    color:#E3F020;
 }
 #footer{
     width: 100vw;
@@ -405,9 +441,9 @@ a{
 }
 
 #merch-title{
-
     font-family: 'Amity Jack';
     font-size: 3000%;
+    text-align: center;
 }
 .merch-ghost-wrapper{
     height: 70vh;
