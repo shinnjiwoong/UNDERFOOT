@@ -25,7 +25,7 @@
       <div id="main__titleContainer">
         <p id="main__title">UNDERFOOT</p>
         <div class="main__imgContainer">
-          <img src="public/img/children.png" alt="" id="children" />
+          <img src="public/img/foot.png" alt="" id="foot" />
           <img src="public/img/rykyti__earth.png" alt="" id="earth" />
         </div>
       </div>
@@ -367,13 +367,13 @@
       </div>
     </div>
     <div id="footer">
-      <p class="footer-text">RYKYTI 2023</p>
+      <p class="footer-text">UNDERFOOT 2023</p>
     </div>
     <script>
         // DOM SELECTORS
       const mainDiv__1 = document.getElementById('mainDiv-1');
       const mainDiv__2 = document.getElementById('mainDiv-2');
-      const children = document.getElementById('children');
+      const foot = document.getElementById('foot');
       const mainHeader = document.getElementById('main-header');
       const headerContents = document.querySelectorAll('.header-content');
       const headerAbout = document.getElementById('header-about');
@@ -396,9 +396,13 @@
           const aboutWrapperRect = aboutWrapper.getBoundingClientRect();
           const worksWrapperRect = worksWrapper.getBoundingClientRect();
           const worksTitleWrapperRect = worksTitleWrapper.getBoundingClientRect();
-
+          if(window.scrollY > 50){
+            foot.style.opacity = '100%';
+          }else{
+            foot.style.opacity = '0%';
+          }
           if(window.scrollY < 385){
-              children.style.transform = `translateY(${-window.scrollY}px)`
+              foot.style.transform = `translateY(${window.scrollY/window.innerHeight*230}%)`
           }
           if(divTwoRect.top <= 0){
               mainHeader.style.position = 'fixed'

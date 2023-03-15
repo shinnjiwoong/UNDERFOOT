@@ -54,7 +54,7 @@ body{
     /* letter-spacing: 30px; */
     font-weight: lighter;
     font-size: 1200%;
-    color: var(--bg-color-1);
+    color: var(--text-color-1);
 }
 .main__imgContainer{
     bottom: 0;
@@ -67,9 +67,12 @@ body{
     width: 50rem;
     z-index: 1;
 }
-#children{
+#foot{
+    opacity: 0%;
     position: absolute;
-    bottom: 0;
+    top: -550px;
+    z-index: 2;
+    transform: translateY(-100%);
 }
 #main__ghostDiv{
     width: 100vw;
@@ -99,7 +102,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--highlight-color-2);
+    background-color: var(--text-color-2);
     z-index: 1;
     transition: all 0.1s ease-in-out;
     border-top: solid 2px #020202;
@@ -117,8 +120,8 @@ a{
 }
 
 .header-content:hover {
-    background-color: #69372C;
-    color: #70b59d;
+    background-color: #ff72b6;
+    cursor: grab;
 }
 #merch-header{
     position: fixed;
@@ -171,19 +174,18 @@ a{
     /* width: 100vw; */
     /* height: 50%; */
     font-family: 'Highway Gothic';
-    font-size: 900%;
+    font-size: 700%;
 }
 #about-description-wrapper{
 
 }
 #about-description{
-    font-size: 300%;
+    font-size: 200%;
     font-weight: normal;
-    padding: 10px 40px;
+    padding: 10px 70px;
 }
 #members-wrapper{
     /* display: flex; */
-    padding-bottom: 100px;
     background-color: #fffdfd;
 }
 .floating-title-wrapper{
@@ -211,7 +213,7 @@ a{
     animation: floatingTitle 5s linear infinite;
     padding: 0px 50px;
     font-family: 'Highway Gothic';
-    font-size: 900%;
+    font-size: 700%;
 }
 #members-outer-wrapper{
     display: flex;
@@ -222,10 +224,10 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding-bottom: 20px;
 }
 .member-content-wrapper:hover{
-    background-color:#0065FF;
+    background-color:#ff72b6;
 }
 #member-reversed{
     flex-direction: row-reverse;
@@ -323,7 +325,7 @@ a{
     /* width: 100%; */
     /* height: 50%; */
     font-family: 'Highway Gothic';
-    font-size: 900%;
+    font-size: 700%;
 }
 .works-project-wrapper{
     border-top: solid 2px var(--text-color-1);
@@ -342,7 +344,7 @@ a{
     height: 75px;
 }
 .works-project-header-wrapper:hover{
-    background-color: #E3F020;
+    background-color: #ff72b6;
     cursor: grab;
 }
 .works-project-title{
