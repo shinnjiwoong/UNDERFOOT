@@ -21,6 +21,12 @@
     font-weight: normal;
     src: url('/public/fonts/highway_gothic/HWYGNRRW.TTF') format('truetype');
 }
+@font-face {
+    font-family: 'Highway Gothic 2';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/fonts/highway_gothic/HWYGOTH.TTF') format('truetype');
+}
 :root{
     --bg-color-1 : #0065FF;
     --highlight-color-1 : #ED7739;
@@ -86,7 +92,7 @@ body{
     width: 100vw;
     /* height: 200vh; */
     opacity: 100%;
-    background-color: var(--bg-color-1);
+    background-color: var(--text-color-1);
 }
 a{
     text-decoration: unset;
@@ -102,7 +108,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--text-color-2);
+    background-color: rgb(210, 207, 207);
     z-index: 1;
     transition: all 0.1s ease-in-out;
     border-top: solid 2px #020202;
@@ -132,7 +138,7 @@ a{
     transition: all 0.1s ease-in-out;
     display: flex;
     justify-content: end;
-    margin: 10px;
+    margin: 10px 20px;
 }
 
 #merch-header-title{
@@ -165,7 +171,7 @@ a{
     
 }
 #about-wrapper{
-    background-color: #f1f1f1;
+    background-color: #fffdfd;
     /* border-top: solid 2px #F8067B; */
 }
 .about-floating-title{
@@ -177,12 +183,25 @@ a{
     font-size: 700%;
 }
 #about-description-wrapper{
-
+    border-top: solid 4px #020202;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-description-wrapper:hover{
+    background-color: #ff72b6;
+}
+#about-description-wrapper:hover #about-description{
+    color: #fffdfd;
 }
 #about-description{
-    font-size: 200%;
-    font-weight: normal;
-    padding: 10px 70px;
+    font-family: 'Highway Gothic 2';
+    font-size: 500%;
+    font-weight: lighter;
+    padding: 150px 150px;
+    word-break: keep-all;
+    line-height: 100%;
+    color: #020202;
 }
 #members-wrapper{
     /* display: flex; */
@@ -194,11 +213,11 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--text-color-2);
+    background-color: #fffdfd;
     height: 150px;
     width: 100vw;
     border-top: solid 4px #020202;
-    border-bottom: solid 4px #020202;
+    border-bottom: solid 2px #020202;
 }
 @-webkit-keyframes floatingTitle{
     0%{
@@ -221,13 +240,18 @@ a{
 .member-content-wrapper{
     /* margin-top: 100px; */
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
+    transition: all 0.1s ease-in-out;
 }
 .member-content-wrapper:hover{
     background-color:#ff72b6;
+}
+.member-content-wrapper:hover .member-profile-img{
+    filter: grayscale(0%);
 }
 #member-reversed{
     flex-direction: row-reverse;
@@ -242,6 +266,8 @@ a{
     padding: 50px;
     width: 100%;
     height: 100%;
+    filter: grayscale(100%);
+    filter: all 0.1s ease-in-out;
 }
 .member-description-wrapper{
     padding: 0px 10px;
@@ -257,7 +283,7 @@ a{
 }
 .member-description-name{
     font-family: 'Highway Gothic';
-    font-size: 400%;
+    font-size: 300%;
     color: var(--text-color-1);
     font-weight: 100;
 }
@@ -273,7 +299,10 @@ a{
     color: var(--text-color-1);
 }
 .member-link-wrapper{
+    width: 100%;
     height: 100%;
+    z-index: 5;
+    background-color: #020202;
 }
 .member-link{
     font-family: 'Highway Gothic';
@@ -296,7 +325,7 @@ a{
 
 
 #works-wrapper{
-    background-color: var(--text-color-2);
+    background-color: #fffdfd;
     position: relative;
 
 }  
@@ -312,12 +341,10 @@ a{
 #works-title-wrapper:nth-child(1){
     overflow: hidden;
     border-top: solid 2px var(--text-color-1);
-    border-bottom: solid 1px var(--text-color-1);
 }
 #works-title-wrapper:nth-child(2){
     overflow: hidden;
     border-top: solid 1px var(--text-color-1);
-    border-bottom: solid 1px var(--text-color-1);
 }
 .works-title-top, .works-title-bottom{
     animation: floatingTitle 5s linear infinite;
@@ -369,14 +396,20 @@ a{
     height: 500px;
     padding: 30px;
 }
+.works-project-vid{
+    width: 720px;
+    height: 480px;
+    padding: 30px;
+}
 .works-project-description-wrapper{
     width: 600px;
     margin: auto;
 }
 .works-project-description{
+    font-family: 'Gothic A1', sans-serif;
     line-height: 150%;
     padding-top: 10px;
-    font-size: 150%;
+    font-size: 110%;
     font-weight: lighter;
     word-break: keep-all;
     color: var(--text-color-1);
@@ -402,7 +435,7 @@ a{
     color: var(--text-color-1);
 }
 .fa-brands:hover{
-    color:#E3F020;
+    color:#ff72b6;
 }
 #footer{
     width: 100vw;
@@ -440,16 +473,17 @@ a{
 #merch-main-wrapper{
     height: 150vh;
     width: 100vw;
-    background-color: #E3F020;
+    background-color: #ff72b6;
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 #merch-no-item-notice{
+    width: 100%;
     display: none;
-    font-family: 'Gothic A1', sans-serif;
-    font-size: 200%;
+    font-family: 'Highway Gothic 2';
+    font-size: 400%;
 }
 
 #merch-product-list{
