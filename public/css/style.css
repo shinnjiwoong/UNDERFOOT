@@ -108,7 +108,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgb(210, 207, 207);
+    background-color: #ff72b6;
     z-index: 1;
     transition: all 0.1s ease-in-out;
     border-top: solid 2px #020202;
@@ -120,13 +120,14 @@ a{
     font-family: 'Highway Gothic';
     font-size: 170%;
     font-weight: bold;
-    color: #69372C;
+    color: #dbd8d8;
     padding: 10px;
     transition: all 0.1s ease-in-out;
 }
 
 .header-content:hover {
-    background-color: #ff72b6;
+    background-color: #dbd8d8;
+    color: #ff72b6;
     cursor: grab;
 }
 #merch-header{
@@ -164,6 +165,7 @@ a{
     display: flex;
     justify-content: center;
     filter: hue-rotate(0deg);;
+    border-top: solid 2px #020202;
 }
 #main-video{
     width: 100%;
@@ -183,25 +185,32 @@ a{
     font-size: 700%;
 }
 #about-description-wrapper{
-    border-top: solid 4px #020202;
+    border-top: solid 2px #020202;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 #about-description-wrapper:hover{
     background-color: #ff72b6;
 }
 #about-description-wrapper:hover #about-description{
-    color: #fffdfd;
+    color: #dbd8d8;
 }
 #about-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Highway Gothic 2';
-    font-size: 500%;
+    font-size: 400%;
     font-weight: lighter;
-    padding: 150px 150px;
+    padding: 250px 150px;
     word-break: keep-all;
     line-height: 100%;
     color: #020202;
+    transition: all 0.2s ease-in-out;
+    border: solid 2px #020202;
+    border-radius: 100%;
 }
 #members-wrapper{
     /* display: flex; */
@@ -209,14 +218,13 @@ a{
 }
 .floating-title-wrapper{
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fffdfd;
     height: 150px;
     width: 100vw;
-    border-top: solid 4px #020202;
+    border-top: solid 2px #020202;
     border-bottom: solid 2px #020202;
 }
 @-webkit-keyframes floatingTitle{
@@ -246,12 +254,17 @@ a{
     align-items: center;
     padding-bottom: 20px;
     transition: all 0.1s ease-in-out;
+    border-left: solid 1px #020202;
+    border-right: solid 1px #020202;
 }
 .member-content-wrapper:hover{
     background-color:#ff72b6;
 }
 .member-content-wrapper:hover .member-profile-img{
     filter: grayscale(0%);
+}
+.member-content-wrapper:hover .member-description-name{
+    color:#dbd8d8;
 }
 #member-reversed{
     flex-direction: row-reverse;
@@ -335,17 +348,11 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--text-color-2);
+    background-color: #fffdfd;
     height: 150px;
-}
-#works-title-wrapper:nth-child(1){
-    overflow: hidden;
     border-top: solid 2px var(--text-color-1);
 }
-#works-title-wrapper:nth-child(2){
-    overflow: hidden;
-    border-top: solid 1px var(--text-color-1);
-}
+
 .works-title-top, .works-title-bottom{
     animation: floatingTitle 5s linear infinite;
     padding: 0px 50px;
@@ -360,6 +367,7 @@ a{
     overflow-y: hidden;
     transition: all 0.5s ease-in-out;
 }
+
 .project-selected{
     height: 600px;
 }
@@ -369,10 +377,14 @@ a{
     align-items: center;
     border-bottom: solid 2px var(--text-color-1);
     height: 75px;
+    transition: all 0.1s ease-in-out;
 }
 .works-project-header-wrapper:hover{
     background-color: #ff72b6;
     cursor: grab;
+}
+.works-project-header-wrapper:hover .works-project-title{
+    color: #dbd8d8;
 }
 .works-project-title{
     padding: 10px 20px;
@@ -380,6 +392,7 @@ a{
     font-size: 300%;
     color: var(--text-color-1);
     font-weight: lighter;
+    transition: all 0.1s ease-in-out;
 }
 .works-project-subtitle{
     font-family: 'Highway Gothic';
@@ -421,7 +434,7 @@ a{
     font-family: 'Gothic A1', sans-serif;
     line-height: 150%;
     list-style-type : none;
-    font-size: 110%;
+    font-size: 130%;
     font-weight: lighter;
     word-break: keep-all;
     color: var(--text-color-1);
