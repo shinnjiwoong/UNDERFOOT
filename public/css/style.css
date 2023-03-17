@@ -196,6 +196,7 @@ a{
 }
 #about-description-wrapper:hover #about-description{
     color: #dbd8d8;
+    border: solid 2px #dbd8d8;
 }
 #about-description{
     display: flex;
