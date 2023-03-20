@@ -1,7 +1,7 @@
 # UNDERFOOT
 ## 프로젝트 개요 / Project Overview
 
-https://user-images.githubusercontent.com/109443641/225894931-22fb52b0-2030-4e43-8080-6f078cb508bf.mp4
+https://user-images.githubusercontent.com/109443641/226278338-5ae19b95-9c59-4694-80b8-a4f683dac3b7.mp4
 
 <br>
 <a href="https://port-0-underfoot-6g2llf7miicl.sel3.cloudtype.app/">Website Link</a> <br><br>
