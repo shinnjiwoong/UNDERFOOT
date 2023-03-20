@@ -403,7 +403,7 @@ a{
 }
 .works-project-sourceWrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .works-project-img{
     width: 500px;
@@ -416,13 +416,13 @@ a{
     padding: 30px;
 }
 .works-project-description-wrapper{
-    width: 600px;
-    margin: auto;
+    width: 50vw;
+    /* margin: auto; */
+    margin: auto 50px;
 }
 .works-project-description{
     font-family: 'Gothic A1', sans-serif;
     line-height: 150%;
-    padding-top: 10px;
     font-size: 110%;
     font-weight: lighter;
     word-break: keep-all;
@@ -432,10 +432,10 @@ a{
     margin-top: 20px;
 }
 .works-project-credit{
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'Highway Gothic Light', sans-serif;
     line-height: 150%;
     list-style-type : none;
-    font-size: 130%;
+    font-size: 200%;
     font-weight: lighter;
     word-break: keep-all;
     color: var(--text-color-1);
