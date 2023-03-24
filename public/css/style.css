@@ -89,7 +89,7 @@ body{
     position: sticky;
     top: 150vh;
     left: 0;
-    width: 100vw;
+    width: 100%;
     /* height: 200vh; */
     opacity: 100%;
     background-color: var(--text-color-1);
@@ -174,6 +174,8 @@ a{
 }
 #about-wrapper{
     background-color: #fffdfd;
+    width: 100vw;
+
     /* border-top: solid 2px #F8067B; */
 }
 .about-floating-title{
@@ -577,4 +579,145 @@ a{
     height: 150vh;
     background-color: #020202;
     opacity: 30%;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 1300px){
+    body{
+        overflow-x: hidden;
+    }
+    #mainDiv-1{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    #main__title{
+        font-family: 'Highway Gothic';
+        /* letter-spacing: 30px; */
+        font-weight: lighter;
+        font-size: 800%;
+        color: var(--text-color-1);
+    }
+    #about-description-wrapper{
+        border-top: solid 2px #020202;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+    }
+    #about-description-wrapper:hover{
+        background-color: #ff72b6;
+    }
+    #about-description-wrapper:hover #about-description{
+        color: #dbd8d8;
+        border: none;
+    }
+    #about-description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Highway Gothic 2';
+        font-size: 200%;
+        font-weight: lighter;
+        padding: 50px 15px;
+        word-break: keep-all;
+        line-height: 100%;
+        color: #020202;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        /* border-radius: 100%; */
+    }
+    #members-outer-wrapper{
+        display: block;
+    }
+    .member-content-wrapper{
+        /* margin-top: 100px; */
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        transition: all 0.1s ease-in-out;
+        border-left: solid 1px #020202;
+        border-right: solid 1px #020202;
+    }
+    .works-project-header-wrapper
+    :nth-child(2){
+        display: none;
+    }
+    .works-project-sourceWrapper{
+        display: block;
+    }
+    .project-selected{
+        height: 1000px;
+    }
+    .works-project-description-wrapper{
+        width: 100%;
+        /* margin: auto; */
+        margin: auto;
+    }
+    .works-project-description{
+        font-family: 'Gothic A1', sans-serif;
+        line-height: 150%;
+        font-size: 110%;
+        font-weight: lighter;
+        word-break: keep-all;
+        color: var(--text-color-1);
+    }
+    .works-project-credit-list{
+        margin-top: 20px;
+    }
+    .works-project-credit{
+        text-align: center;
+    }
+    .works-project-links-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .works-project-img{
+        display: block;
+        margin: auto;
+    }
+    .works-project-vid{
+        width: 720px;
+        height: 480px;
+        padding: 30px;
+    }
+    .members-title-bottom, .works-title-bottom{
+        font-size: 400%;
+    }
+    
+}
+@media (max-width: 800px){
+    #main__title{
+        font-family: 'Highway Gothic';
+        /* letter-spacing: 30px; */
+        font-weight: lighter;
+        font-size: 400%;
+        color: var(--text-color-1);
+    }
+    #earth{
+        width: 30rem;
+        z-index: 1;
+    }
+    #foot{
+        opacity: 0%;
+        width: 30rem;
+        position: absolute;
+        top: -550px;
+        z-index: 2;
+        transform: translateY(-100%);
+    }
+    #header-title{
+        display: none;
+    }
+    #header-right-wrapper{
+        justify-content: space-between;
+    }
+    .header-content{
+        font-size: 150%;
+    }
 }
