@@ -691,21 +691,21 @@ a{
     }
     
 }
-@media (max-width: 800px){
+@media (max-width: 400px){
     #main__title{
         font-family: 'Highway Gothic';
         /* letter-spacing: 30px; */
         font-weight: lighter;
-        font-size: 400%;
+        font-size: 300%;
         color: var(--text-color-1);
     }
     #earth{
-        width: 30rem;
+        width: 25rem;
         z-index: 1;
     }
     #foot{
         opacity: 0%;
-        width: 30rem;
+        width: 25rem;
         position: absolute;
         top: -550px;
         z-index: 2;
@@ -719,5 +719,23 @@ a{
     }
     .header-content{
         font-size: 150%;
+    }
+    #about-description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Highway Gothic 2';
+        font-size: 100%;
+        font-weight: lighter;
+        padding: 50px 15px;
+        word-break: keep-all;
+        line-height: 100%;
+        color: #020202;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        /* border-radius: 100%; */
+    }
+    .works-project-title{
+        font-size: 200%;
     }
 }
