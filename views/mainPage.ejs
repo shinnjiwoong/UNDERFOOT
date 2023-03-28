@@ -48,8 +48,14 @@
       </div>
       <div id="about-wrapper">
         <div id="about-description-wrapper">
-          <p id="about-description">UNDERFOOT is a collective based in Seoul, supporting various genres of Underground cultures and movements.
-          </p>
+          <div id="about-description-left-wrapper">
+            <p id="left-title">Loves Underground</p>
+            <p id="left-description">
+              Underfoot is a collective based in Seoul, supporting various genres of underground cultures and movements. <br><br>언더풋은 서울을 기반으로 하여 다양한 언더그라운드 문화를 서포트하는 집단입니다.
+            </p>
+          </div>
+          <div id="about-description-right"><img src="public/img/foot.png" alt="" id="foot-about" />
+          </div>
         </div>
       </div>
       <div id="members-wrapper">
@@ -133,16 +139,19 @@
               <p class="works-project-title">| EP, 2023</p>
             </div>
             <div class="works-project-sourceWrapper">
-              <img
+              <div class="works-media-wrapper">
+                <img
                 src="public/img/noboundary_cover.png"
                 alt=""
                 class="works-project-img"
               />
+              </div>
+              
               <div class="works-project-description-wrapper">
                 <p class="works-project-description">
                   <ul class="works-project-credit-list">
                     <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet (on NOBOUNDARY), Basshammer (on 눈떠) & Kaeoh626 (on ENUFF) </li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet, Basshammer & Kaeoh626</li>
                     <li class="works-project-credit">Music Production : Monti Kayoti</li>
                   </ul>
                 </p>
@@ -165,10 +174,13 @@
               <p class="works-project-title">| Campaign, 2022</p>
             </div>
             <div class="works-project-sourceWrapper">
-              <video class = 'works-project-vid' autoplay muted>
-                <source src="/public/vid/VID__CASPER.mp4" type="video/mp4">
-                This browser does not support the video, sorry.
-              </video>
+              <div class="works-media-wrapper">
+                <video class = 'works-project-vid' autoplay muted>
+                  <source src="/public/vid/VID__CASPER.mp4" type="video/mp4">
+                  This browser does not support the video, sorry.
+                </video>
+              </div>
+              
               <div class="works-project-description-wrapper">
                 <p class="works-project-description">
                   <ul class="works-project-credit-list">
@@ -190,10 +202,13 @@
               <p class="works-project-title">| Campaign, 2022</p>
             </div>
             <div class="works-project-sourceWrapper">
-              <video class = 'works-project-vid' autoplay muted>
-                <source src="/public/vid/VID__KASINASS.mp4" type="video/mp4">
-                This browser does not support the video, sorry.
-              </video>
+              <div class="works-media-wrapper">
+                <video class = 'works-project-vid' autoplay muted>
+                  <source src="/public/vid/VID__KASINASS.mp4" type="video/mp4">
+                  This browser does not support the video, sorry.
+                </video>
+              </div>
+              
               <div class="works-project-description-wrapper">
                 <p class="works-project-description">
                   <ul class="works-project-credit-list">
@@ -214,10 +229,12 @@
               <p class="works-project-title">| Campaign, 2022</p>
             </div>
             <div class="works-project-sourceWrapper">
-              <video class = 'works-project-vid' autoplay muted>
-                <source src="/public/vid/VID__KAFFE.mp4" type="video/mp4">
-                This browser does not support the video, sorry.
-              </video>
+              <div class="works-media-wrapper">
+                <video class = 'works-project-vid' autoplay muted>
+                  <source src="/public/vid/VID__KAFFE.mp4" type="video/mp4">
+                  This browser does not support the video, sorry.
+                </video>
+              </div>
               <div class="works-project-description-wrapper">
                 <p class="works-project-description">
                   <ul class="works-project-credit-list">
@@ -239,16 +256,19 @@
               <p class="works-project-title">| EP, 2021</p>
             </div>
             <div class="works-project-sourceWrapper">
-              <img
+              <div class="works-media-wrapper">
+                <img
                 src="public/img/Wolf Kooky - REM (2021).jpeg"
                 alt=""
                 class="works-project-img"
               />
+              </div>
+              
               <div class="works-project-description-wrapper">
                 <p class="works-project-description">
                   <ul class="works-project-credit-list">
                     <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah (on ALRIGHT)</li>
+                    <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah</li>
                     <li class="works-project-credit">Music Production : Monti Kayoti</li>
                   </ul>
                 </p>
@@ -309,15 +329,15 @@
           if(window.scrollY < 385){
               foot.style.transform = `translateY(${window.scrollY/window.innerHeight*230}%)`
           }
-          if(divTwoRect.top <= 0){
-              mainHeader.style.position = 'fixed'
-              mainHeader.style.opacity = '100%'
-              mainHeader.style.display = 'flex'
-          }else{
-              mainHeader.style.opacity = '0%'
-              mainHeader.style.position = 'static'
-              mainHeader.style.display = 'none'
-          }
+          // if(divTwoRect.top <= 0){
+          //     mainHeader.style.position = 'fixed'
+          //     mainHeader.style.opacity = '100%'
+          //     mainHeader.style.display = 'flex'
+          // }else{
+          //     mainHeader.style.opacity = '0%'
+          //     mainHeader.style.position = 'static'
+          //     mainHeader.style.display = 'none'
+          // }
           mainVideoWrapper.style.filter = `hue-rotate(${Math.abs(mainVideoRect.top/mainVideoRect.height*360)}deg)`
 
           // blur(${Math.abs(mainVideoRect.top/mainVideoRect.height*10)}px) 
