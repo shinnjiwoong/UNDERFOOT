@@ -38,7 +38,7 @@
           <a href="#works-wrapper" id="header-works" class="header-content"
             >WORKS</a
           >
-          <a onclick="goToMerch()" class="header-content">MERCH</a>
+          <a onclick="goToMerch()" id="header-merch" class="header-content">MERCH</a>
         </div>
       </header>
       <div id="main-video-wrapper">
@@ -49,13 +49,10 @@
       <div id="about-wrapper">
         <div id="about-description-wrapper">
           <div id="about-description-left-wrapper">
-            <p id="left-title">Loves Underground</p>
-            <p id="left-description">
-              Underfoot is a collective based in Seoul, supporting various genres of underground cultures and movements. <br><br>언더풋은 서울을 기반으로 하여 다양한 언더그라운드 문화를 서포트하는 집단입니다.
-            </p>
+            <img src="public/img/underfoot_bg.png" alt="" id="about-image">
           </div>
-          <div id="about-description-right"><img src="public/img/foot.png" alt="" id="foot-about" />
-          </div>
+          <!-- <img src="public/img/earth.png" alt="" id="earth-about"> -->
+          <img src="public/img/foot.png" alt="" id="foot-about" />
         </div>
       </div>
       <div id="members-wrapper">
@@ -329,28 +326,28 @@
           if(window.scrollY < 385){
               foot.style.transform = `translateY(${window.scrollY/window.innerHeight*230}%)`
           }
-          // if(divTwoRect.top <= 0){
-          //     mainHeader.style.position = 'fixed'
-          //     mainHeader.style.opacity = '100%'
-          //     mainHeader.style.display = 'flex'
-          // }else{
-          //     mainHeader.style.opacity = '0%'
-          //     mainHeader.style.position = 'static'
-          //     mainHeader.style.display = 'none'
-          // }
+          if(divTwoRect.top <= 0){
+              mainHeader.style.position = 'fixed'
+              mainHeader.style.opacity = '100%'
+              mainHeader.style.display = 'flex'
+          }else{
+              mainHeader.style.opacity = '0%'
+              mainHeader.style.position = 'static'
+              mainHeader.style.display = 'none'
+          }
           mainVideoWrapper.style.filter = `hue-rotate(${Math.abs(mainVideoRect.top/mainVideoRect.height*360)}deg)`
 
           // blur(${Math.abs(mainVideoRect.top/mainVideoRect.height*10)}px) 
           if(aboutWrapperRect.top <= 0 && worksWrapperRect.top > 0){
               mainHeader.style.zIndex = '2'
               // mainHeader.style.backgroundColor = '#ECECEC';
-              headerAbout.style.textDecoration = 'underline 2px #dbd8d8';
+              headerAbout.style.textDecoration = 'underline 2px black';
               headerWorks.style.textDecoration = 'none';
 
           }else if(aboutWrapperRect.top < 0 && worksWrapperRect.top <= 0){
               mainHeader.style.zIndex = '2'
               headerAbout.style.textDecoration = 'none';
-              headerWorks.style.textDecoration = 'underline 2px #dbd8d8';
+              headerWorks.style.textDecoration = 'underline 2px black';
           }else{
               mainHeader.style.zIndex = '-1'
               headerWorks.style.textDecoration = 'none';
