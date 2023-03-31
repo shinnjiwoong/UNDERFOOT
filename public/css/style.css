@@ -145,7 +145,7 @@ a{
     cursor: grab;
 }
 #header-merch{
-    text-decoration: line-through 3px black;
+    text-decoration: line-through 2px black;
 }
 #merch-header{
     position: fixed;
@@ -222,29 +222,42 @@ a{
 #about-description-left-wrapper{
     /* width: 50vw; */
     height: 100vh;
-    /* padding: 0px 20px; */
-    color: #020202;
+    padding: 3px 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(8, 8, 8);
     transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* border-right: 1px solid; */
 }
 #about-image{
+    position: absolute;
     width: 100%;
     height: 100%;
 }
-#left-title{
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    font-size: 1200%;
-    color: black;
-    /* padding: 30px; */
-    /* margin-bottom: 100px; */
-}
-#left-description{
-    padding: 0px 20px;
-    font-size: 500%;
-    font-family: "Helvetica Neue";
-    font-weight: normal;
 
+#about-description-text{
+    text-align: center;
+    font-family: 'Highway Gothic';
+    font-weight: 500;
+    font-size: 230%;
+    letter-spacing: -1px;
+    padding: 0px 10px;
+}
+.about-description-highlight{
+    font-family: 'Coming Soon', cursive;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0px;
+    display: inline-block;
+}
+.about-description-highlight:nth-child(3){
+    font-family: 'Coming Soon', cursive;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 0px;
+    display: inline-block;
 }
 #about-description-right{
 
@@ -268,11 +281,12 @@ a{
     height: auto;
 }
 #foot-about{
+    display: none;
     position: absolute;
     bottom: 5%;
     right: 5%;
     animation: upAndDown 0.5s ease-in-out infinite alternate-reverse;
-    width: 30%;
+    width: 20%;
     height: auto;
 }
 #members-wrapper{
@@ -432,7 +446,8 @@ a{
 }
 
 .project-selected{
-    height: 550px;
+    height: 700px;
+    background-color: rgb(218, 218, 218);
 }
 .works-project-header-wrapper{
     display: flex;
@@ -464,32 +479,34 @@ a{
 
 }
 .works-project-sourceWrapper{
-    display: flex;
+    display: block;
     justify-content: center;
 }
 .works-media-wrapper{
-    width: 50vw;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .works-project-img{
-    width: 70%;
+    width: 30%;
     max-width: 100%;
     height: 70%;
     padding: 30px;
 }
 .works-project-vid{
-    width: 100%;
+    width: 50%;
     max-width: 100%;
     height: 100%;
     padding: 30px;
 }
+
 .works-project-description-wrapper{
-    width: 50vw;
+    width: 100%;
+    display: block;
     /* margin: auto; */
-    margin: auto 50px;
+    margin: auto;
 }
 .works-project-description{
     font-family: 'Gothic A1', sans-serif;
@@ -500,18 +517,25 @@ a{
     color: var(--text-color-1);
 }
 .works-project-credit-list{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 .works-project-credit{
-    font-family: 'Helvetica';
+    border-top: solid 1px black;
+    font-family: 'Highway Gothic';
     line-height: 150%;
     list-style-type : none;
-    font-size: 130%;
-    font-weight: lighter;
+    font-size: 160%;
+    font-weight: normal;
     word-break: keep-all;
     color: var(--text-color-1);
+    text-align: center;
+}
+.works-project-credit:last-child{
+    border-bottom: solid 1px black;
 }
 .works-project-links-wrapper{
+    display: flex;
+    justify-content: center;
     padding-top: 30px;
 }
 .fa-brands{
@@ -523,12 +547,14 @@ a{
     color:#ff72b6;
 }
 #footer{
+
     width: 100vw;
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     z-index: 2;
     bottom: 0;
+    pointer-events: none;
 }
 .footer-text{
     padding-bottom: 10px;
@@ -812,9 +838,22 @@ a{
     #about-description-left-wrapper{
         height: 50vh;
     }
+    #about-description-text{
+        font-size: 100%;
+    }
     #about-image{
         width: 100%;
         height: 100%;
+    }
+    .member-img-wrapper{
+        width: 300px;
+        height: 300px;
+    }
+    .member-description-name{
+        font-family: 'Highway Gothic';
+        font-size: 200%;
+        color: var(--text-color-1);
+        font-weight: 100;
     }
     .works-project-title{
         font-size: 200%;
@@ -840,7 +879,13 @@ a{
     }
     .works-project-credit{
         text-align: center;
-        font-size: 100%;
+        font-size: 120%;
+        border: none;
+    }
+    .works-project-credit:last-child{
+        text-align: center;
+        font-size: 120%;
+        border: none;
     }
     .project-selected{
         height: 600px;
