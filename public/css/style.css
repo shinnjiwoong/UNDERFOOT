@@ -33,6 +33,7 @@
     --highlight-color-2 : #E3F020;
     --text-color-1 : #0F0F0F;
     --text-color-2 : #f1f1f1;
+    --main-bg : #c8c7c7;
 }
 
 
@@ -69,10 +70,21 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
 }
+#main-title-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#main-title-logo{
+    margin: auto;
+    width: 90%;
+    height: auto;
+    transform: translateY(-10%);
+}
 #main__title{
-    font-family: 'Highway Gothic';
+    /* font-family: 'Highway Gothic'; */
     /* letter-spacing: 30px; */
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 1200%;
     color: var(--text-color-1);
 }
@@ -131,7 +143,6 @@ a{
 }
 
 .header-content{
-    font-family: 'Highway Gothic';
     font-size: 110%;
     font-weight: bold;
     color: black;
@@ -145,7 +156,10 @@ a{
     cursor: grab;
 }
 #header-merch{
-    text-decoration: line-through 2px black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: line-through 1px black;
+    font-style: italic;
+    font-weight: lighter;
 }
 #merch-header{
     position: fixed;
@@ -179,7 +193,7 @@ a{
 }
 #main-video-wrapper{
     /* padding: 100px; */
-    display: flex;
+    display: none;
     justify-content: center;
     filter: hue-rotate(0deg);;
     border-top: solid 2px #020202;
@@ -188,11 +202,11 @@ a{
 #main-video{
     width: 100%;
     pointer-events: none;
-    
+    display: none;
 }
 #about-wrapper{
-    background-color: #ffffff;
-    width: 100vw;
+    background-color: #c8c7c7;
+    width: 100%;
     /* display: none; */
     /* border-top: solid 2px #F8067B; */
 }
@@ -220,16 +234,21 @@ a{
     color: #dbd8d8;
 } */
 #about-description-left-wrapper{
-    /* width: 50vw; */
-    height: 100vh;
-    padding: 3px 10px;
-    background-color: rgb(255, 255, 255);
+    height: 200%;
+    padding: 10px 40px;
+    background-color: var(--main-bg);
     color: rgb(8, 8, 8);
     transition: all 0.2s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     /* border-right: 1px solid; */
+}
+#underfoot-logo-about{
+    width: 10%;
+    height: auto;
+    display: none;
 }
 #about-image{
     position: absolute;
@@ -237,32 +256,53 @@ a{
     height: 100%;
 }
 
-#about-description-text{
-    text-align: center;
-    font-family: 'Highway Gothic';
-    font-weight: 500;
-    font-size: 230%;
-    letter-spacing: -1px;
-    padding: 0px 10px;
+#about-description-text-wrapper{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
-.about-description-highlight{
-    font-family: 'Coming Soon', cursive;
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 0px;
+#about-description-title{
+    /* padding-top: 3%; */
+}
+#about-title{
     display: inline-block;
-}
-.about-description-highlight:nth-child(3){
-    font-family: 'Coming Soon', cursive;
-    font-style: italic;
+    /* font-family: 'Times New Roman'; */
+    font-size: 1000%;
     font-weight: bold;
-    letter-spacing: 0px;
-    display: inline-block;
+    padding: 20px;
 }
-#about-description-right{
+#about-title-pronoun{
+    display: inline-block;
+    /* font-family: 'Times New Roman'; */
+    font-size: 1000%;
+    text-decoration: underline 1.5px black;
+}
 
-    
-    transition: all 0.2s ease-in-out;
+.about-def-form, .about-def-text{
+    /* font-family: 'Times New Roman'; */
+    padding: 20px;
+    font-weight: bold;
+    font-size: 500%;
+}
+.about-def-highlight{
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-style: italic;
+    display: inline;
+    text-decoration: underline 3px;
+}
+#about-logo-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+#about-logo{
+    padding: 15px 20px;
+    margin: auto;
+    width: 15%;
+    height: auto;
 }
 @-webkit-keyframes upAndDown{
     0%{
@@ -291,14 +331,14 @@ a{
 }
 #members-wrapper{
     /* display: flex; */
-    background-color: #fffdfd;
+    background-color: var(--main-bg);
 }
 .floating-title-wrapper{
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fffdfd;
+    background-color: var(--main-bg);
     height: 150px;
     width: 100vw;
     border-top: solid 2px #020202;
@@ -316,7 +356,8 @@ a{
 .members-title-top, .members-title-bottom{
     animation: floatingTitle 5s linear infinite;
     padding: 0px 50px;
-    font-family: 'Highway Gothic';
+    font-weight: normal;
+    /* font-family: 'Highway Gothic'; */
     font-size: 700%;
 }
 #members-outer-wrapper{
@@ -335,14 +376,12 @@ a{
     border-right: solid 1px #020202;
 }
 .member-content-wrapper:hover{
-    background-color:#ff72b6;
+    background-color:#fdd3f6;
 }
 .member-content-wrapper:hover .member-profile-img{
     filter: grayscale(0%);
 }
-.member-content-wrapper:hover .member-description-name{
-    color:white;
-}
+
 #member-reversed{
     flex-direction: row-reverse;
 
@@ -372,10 +411,10 @@ a{
     align-items: flex-end;
 }
 .member-description-name{
-    font-family: 'Highway Gothic';
-    font-size: 300%;
+    /* font-family: 'Highway Gothic'; */
+    font-size: 200%;
     color: var(--text-color-1);
-    font-weight: 100;
+    font-weight: bold;
 }
 .member-description-info{
     display: none;
@@ -415,7 +454,7 @@ a{
 
 
 #works-wrapper{
-    background-color: #fffdfd;
+    background-color: var(--main-bg);
     position: relative;
     /* scroll-snap-align: start; */
 }  
@@ -425,7 +464,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fffdfd;
+    background-color: var(--main-bg);
     height: 150px;
     border-top: solid 2px var(--text-color-1);
 }
@@ -435,16 +474,29 @@ a{
     padding: 0px 50px;
     /* width: 100%; */
     /* height: 50%; */
-    font-family: 'Highway Gothic';
+    /* font-family: 'Highway Gothic'; */
     font-size: 700%;
 }
-.works-project-wrapper{
+#works-project-list-wrapper{
+    background-color: var(--main-bg);
     border-top: solid 2px var(--text-color-1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.works-project-wrapper{
+    width: 80%;
+    border-bottom: solid 2px var(--text-color-1);
+    border-left: solid 2px var(--text-color-1);
+    border-right: solid 2px var(--text-color-1);
     height: 75px;
     overflow-y: hidden;
     transition: all 0.5s ease-in-out;
 }
-
+/* .works-project-wrapper:first-child{
+    border: none;
+} */
 .project-selected{
     height: 700px;
     background-color: rgb(218, 218, 218);
@@ -458,19 +510,25 @@ a{
     transition: all 0.1s ease-in-out;
 }
 .works-project-header-wrapper:hover{
-    background-color: #ff72b6;
+    background-color: #fdd3f6;
     cursor: grab;
 }
 .works-project-header-wrapper:hover .works-project-title{
-    color: #dbd8d8;
+    color: #000000;
 }
 .works-project-title{
     padding: 10px 20px;
-    font-family: 'Highway Gothic Light';
+    /* font-family: 'Highway Gothic Light'; */
     font-size: 280%;
     color: var(--text-color-1);
-    font-weight: lighter;
+    font-weight: bold;
     transition: all 0.1s ease-in-out;
+}
+#works-index{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 200%;
 }
 .works-project-subtitle{
     font-family: 'Highway Gothic';
@@ -521,7 +579,6 @@ a{
 }
 .works-project-credit{
     border-top: solid 1px black;
-    font-family: 'Highway Gothic';
     line-height: 150%;
     list-style-type : none;
     font-size: 160%;

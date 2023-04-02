@@ -20,7 +20,10 @@
   <body>
     <div id="mainDiv-1">
       <div id="main__titleContainer">
-        <p id="main__title">UNDERFOOT</p>
+        <!-- <p id="main__title">UNDERFOOT</p> -->
+        <div id="main-title-wrapper">
+          <img src="../public/img/UNDERFOOT_MAIN_LOGO_1.png" alt="" id="main-title-logo">
+        </div>
         <div class="main__imgContainer">
           <img src="public/img/foot.png" alt="" id="foot" />
           <img src="public/img/rykyti__earth.png" alt="" id="earth" />
@@ -49,10 +52,16 @@
       <div id="about-wrapper">
         <div id="about-description-wrapper">
           <div id="about-description-left-wrapper">
-            <img src="../public/img/underfoot_bg.png" alt="about bg" id="about-image">
-            <div id="about-description-text">
-              Underfoot is a collective of artists who love <p class="about-description-highlight">underground cultures.</p> <br> Based in <p class="about-description-highlight">Seoul,</p> craeting works mixed with <p class="about-description-highlight">2D animation and music.</p> 
+            
+            <div id="about-description-text-wrapper">
+              <div id="def-highlight" class="about-def-wrapper">
+                <div class="about-def-text">WE ARE A COLLECTIVE OF ARTISTS WHO LOVE <p class="about-def-highlight">UNDERGROUND CULTURES</p>. WE CREATE <p class="about-def-highlight">2D ANIMATION WITH MUSIC</p>.</div>
+              </div>
+              <div id="about-logo-wrapper">
+                <img src="../public/img/UNDERFOOT_MAIN_LOGO_1.png" alt="" id="about-logo">
+              </div>
             </div>
+            
           </div>
           <!-- <img src="public/img/earth.png" alt="" id="earth-about"> -->
           <img src="public/img/foot.png" alt="" id="foot-about" />
@@ -85,7 +94,7 @@
             />
             </div>
             <div class="member-description-wrapper">
-              <p class="member-description-name">Cary Nam</p>
+              <p class="member-description-name">CARY NAM</p>
             </div>
           </a>
           <a href="https://www.instagram.com/wolfkooky/" class="member-content-wrapper" target="_blank">
@@ -97,7 +106,7 @@
             />
             </div>
             <div class="member-description-wrapper">
-              <p class="member-description-name">Wolf Kooky</p>
+              <p class="member-description-name">WOLF KOOKY</p>
             </div>
           </a>
           <a href='https://www.instagram.com/mt.kyt/' class="member-content-wrapper" target="_blank">
@@ -109,7 +118,7 @@
             />
             </div>
             <div class="member-description-wrapper">
-              <p class="member-description-name">Monti Kayoti</p>
+              <p class="member-description-name">MONTI KAYOTI</p>
             </div>
           </a>
         </div>
@@ -132,161 +141,164 @@
           <p class="works-title-bottom">WORKS</p>
           <p class="works-title-bottom">WORKS</p>
         </div>
-        <div class="works-project-wrapper">
-          <div class="works-project-infoWrapper">
-            <div class="works-project-header-wrapper">
-              <p class="works-project-title">NO BOUNDARY</p>
-              <p class="works-project-title">| EP, 2023</p>
-            </div>
-            <div class="works-project-sourceWrapper">
-              <div class="works-media-wrapper">
-                <img
-                src="public/img/noboundary_cover.png"
-                alt=""
-                class="works-project-img"
-              />
+        <div id="works-project-list-wrapper">
+          <div class="works-project-wrapper">
+            <div class="works-project-infoWrapper">
+              <div class="works-project-header-wrapper">
+                <p class="works-project-title">NO BOUNDARY</p>
+                <p id="works-index" class="works-project-title"> EP, 2023</p>
               </div>
-              
-              <div class="works-project-description-wrapper">
-                <p class="works-project-description">
-                  <ul class="works-project-credit-list">
-                    <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet, Basshammer & Kaeoh626</li>
-                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                  </ul>
-                </p>
-                <div class="works-project-links-wrapper">
-                  <a href="" class="works-project-link"
-                    ><i class="fa-brands fa-youtube"></i
-                  ></a>
-                  <a href="" class="works-project-link"
-                    ><i class="fa-brands fa-spotify"></i
-                  ></a>
+              <div class="works-project-sourceWrapper">
+                <div class="works-media-wrapper">
+                  <img
+                  src="public/img/noboundary_cover.png"
+                  alt=""
+                  class="works-project-img"
+                />
+                </div>
+                
+                <div class="works-project-description-wrapper">
+                  <p class="works-project-description">
+                    <ul class="works-project-credit-list">
+                      <li class="works-project-credit">Visual Production : Cary Nam</li>
+                      <li class="works-project-credit">Vocal Performance : Wolf Kooky, Lil Poet, Basshammer & Kaeoh626</li>
+                      <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                    </ul>
+                  </p>
+                  <div class="works-project-links-wrapper">
+                    <a href="" class="works-project-link"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a href="" class="works-project-link"
+                      ><i class="fa-brands fa-spotify"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works-project-wrapper">
-          <div class="works-project-infoWrapper">
-            <div class="works-project-header-wrapper">
-              <p class="works-project-title">HYUNDAI CASPER x Kasina</p>
-              <p class="works-project-title">| Campaign, 2022</p>
-            </div>
-            <div class="works-project-sourceWrapper">
-              <div class="works-media-wrapper">
-                <video class = 'works-project-vid' autoplay muted>
-                  <source src="/public/vid/VID__CASPER.mp4" type="video/mp4">
-                  This browser does not support the video, sorry.
-                </video>
+          <div class="works-project-wrapper">
+            <div class="works-project-infoWrapper">
+              <div class="works-project-header-wrapper">
+                <p class="works-project-title">HYUNDAI CASPER x Kasina</p>
+                <p id="works-index" class="works-project-title"> Campaign, 2022</p>
+              </div>
+              <div class="works-project-sourceWrapper">
+                <div class="works-media-wrapper">
+                  <video class = 'works-project-vid' autoplay muted>
+                    <source src="/public/vid/VID__CASPER.mp4" type="video/mp4">
+                    This browser does not support the video, sorry.
+                  </video>
+                </div>
+                
+                <div class="works-project-description-wrapper">
+                  <p class="works-project-description">
+                    <ul class="works-project-credit-list">
+                      <li class="works-project-credit">Visual Production : Cary Nam</li>
+                      <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                    </ul>
+                  </p>
+                </div>
+  
               </div>
               
-              <div class="works-project-description-wrapper">
-                <p class="works-project-description">
-                  <ul class="works-project-credit-list">
-                    <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                  </ul>
-                </p>
-              </div>
-
-            </div>
-            
-            
-          </div>
-        </div>
-        <div class="works-project-wrapper">
-          <div class="works-project-infoWrapper">
-            <div class="works-project-header-wrapper">
-              <p class="works-project-title">Kasina Seongsu</p>
-              <p class="works-project-title">| Campaign, 2022</p>
-            </div>
-            <div class="works-project-sourceWrapper">
-              <div class="works-media-wrapper">
-                <video class = 'works-project-vid' autoplay muted>
-                  <source src="/public/vid/VID__KASINASS.mp4" type="video/mp4">
-                  This browser does not support the video, sorry.
-                </video>
-              </div>
               
-              <div class="works-project-description-wrapper">
-                <p class="works-project-description">
-                  <ul class="works-project-credit-list">
-                    <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                  </ul>
-                </p>
-              </div>
             </div>
-            
-            
           </div>
-        </div>
-        <div class="works-project-wrapper">
-          <div class="works-project-infoWrapper">
-            <div class="works-project-header-wrapper">
-              <p class="works-project-title">Kasina Kaffe</p>
-              <p class="works-project-title">| Campaign, 2022</p>
-            </div>
-            <div class="works-project-sourceWrapper">
-              <div class="works-media-wrapper">
-                <video class = 'works-project-vid' autoplay muted>
-                  <source src="/public/vid/VID__KAFFE.mp4" type="video/mp4">
-                  This browser does not support the video, sorry.
-                </video>
+          <div class="works-project-wrapper">
+            <div class="works-project-infoWrapper">
+              <div class="works-project-header-wrapper">
+                <p class="works-project-title">Kasina Seongsu</p>
+                <p id="works-index" class="works-project-title"> Campaign, 2022</p>
               </div>
-              <div class="works-project-description-wrapper">
-                <p class="works-project-description">
-                  <ul class="works-project-credit-list">
-                    <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                  </ul>
-                </p>
-              </div>
-
-            </div>
-            
-            
-          </div>
-        </div>
-        <div class="works-project-wrapper">
-          <div class="works-project-infoWrapper">
-            <div class="works-project-header-wrapper">
-              <p class="works-project-title">REM</p>
-              <p class="works-project-title">| EP, 2021</p>
-            </div>
-            <div class="works-project-sourceWrapper">
-              <div class="works-media-wrapper">
-                <img
-                src="public/img/Wolf Kooky - REM (2021).jpeg"
-                alt=""
-                class="works-project-img"
-              />
-              </div>
-              
-              <div class="works-project-description-wrapper">
-                <p class="works-project-description">
-                  <ul class="works-project-credit-list">
-                    <li class="works-project-credit">Visual Production : Cary Nam</li>
-                    <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah</li>
-                    <li class="works-project-credit">Music Production : Monti Kayoti</li>
-                  </ul>
-                </p>
-                <div class="works-project-links-wrapper">
-                  <a href="https://youtu.be/1AlYFWpMFHs" class="works-project-link" target="_blank"
-                    ><i class="fa-brands fa-youtube"></i
-                  ></a>
-                  <a href="https://open.spotify.com/album/3o3wiixU7kea7WqqV0slMD?si=dLQTXUL4Tem97CENFfYhuw" class="works-project-link" target="_blank"
-                    ><i class="fa-brands fa-spotify"></i
-                  ></a>
+              <div class="works-project-sourceWrapper">
+                <div class="works-media-wrapper">
+                  <video class = 'works-project-vid' autoplay muted>
+                    <source src="/public/vid/VID__KASINASS.mp4" type="video/mp4">
+                    This browser does not support the video, sorry.
+                  </video>
+                </div>
+                
+                <div class="works-project-description-wrapper">
+                  <p class="works-project-description">
+                    <ul class="works-project-credit-list">
+                      <li class="works-project-credit">Visual Production : Cary Nam</li>
+                      <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
-
+              
+              
             </div>
-            
-            
+          </div>
+          <div class="works-project-wrapper">
+            <div class="works-project-infoWrapper">
+              <div class="works-project-header-wrapper">
+                <p class="works-project-title">Kasina Kaffe</p>
+                <p id="works-index" class="works-project-title"> Campaign, 2022</p>
+              </div>
+              <div class="works-project-sourceWrapper">
+                <div class="works-media-wrapper">
+                  <video class = 'works-project-vid' autoplay muted>
+                    <source src="/public/vid/VID__KAFFE.mp4" type="video/mp4">
+                    This browser does not support the video, sorry.
+                  </video>
+                </div>
+                <div class="works-project-description-wrapper">
+                  <p class="works-project-description">
+                    <ul class="works-project-credit-list">
+                      <li class="works-project-credit">Visual Production : Cary Nam</li>
+                      <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                    </ul>
+                  </p>
+                </div>
+  
+              </div>
+              
+              
+            </div>
+          </div>
+          <div class="works-project-wrapper">
+            <div class="works-project-infoWrapper">
+              <div class="works-project-header-wrapper">
+                <p class="works-project-title">REM</p>
+                <p id="works-index" class="works-project-title"> EP, 2021</p>
+              </div>
+              <div class="works-project-sourceWrapper">
+                <div class="works-media-wrapper">
+                  <img
+                  src="public/img/Wolf Kooky - REM (2021).jpeg"
+                  alt=""
+                  class="works-project-img"
+                />
+                </div>
+                
+                <div class="works-project-description-wrapper">
+                  <p class="works-project-description">
+                    <ul class="works-project-credit-list">
+                      <li class="works-project-credit">Visual Production : Cary Nam</li>
+                      <li class="works-project-credit">Vocal Performance : Wolf Kooky & Nieah</li>
+                      <li class="works-project-credit">Music Production : Monti Kayoti</li>
+                    </ul>
+                  </p>
+                  <div class="works-project-links-wrapper">
+                    <a href="https://youtu.be/1AlYFWpMFHs" class="works-project-link" target="_blank"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a href="https://open.spotify.com/album/3o3wiixU7kea7WqqV0slMD?si=dLQTXUL4Tem97CENFfYhuw" class="works-project-link" target="_blank"
+                      ><i class="fa-brands fa-spotify"></i
+                    ></a>
+                  </div>
+                </div>
+  
+              </div>
+              
+              
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
     <div id="footer">
