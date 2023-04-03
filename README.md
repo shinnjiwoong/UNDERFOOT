@@ -1,7 +1,9 @@
 # UNDERFOOT
 ## 프로젝트 개요 / Project Overview
 
-https://user-images.githubusercontent.com/109443641/226278338-5ae19b95-9c59-4694-80b8-a4f683dac3b7.mp4
+
+https://user-images.githubusercontent.com/109443641/229408358-ba4801a4-b315-4a0e-a10d-8e7acb9c196a.mp4
+
 
 <br>
 <a href="https://www.underfoot.place/">Website Link</a> <br><br>
@@ -44,14 +46,6 @@ Cary Nam, Wolf Kooky, Monti Kayoti의 콜렉티브 팀 UNDERFOOT의 오피셜 �
   #### Deep Layers
   - 여러 div 요소들의 Position과 z-index를 잘 조합하여 입체감있는 레이어를 가진 웹사이트를 제작하고자 했다.
   
- ### 구현 화면 / Project Screens
- <img width="1440" alt="UNDERFOOT_1" src="https://user-images.githubusercontent.com/109443641/225895617-418eadd8-b40f-451f-90e7-f47e5b5fe83d.png">
- 
-<img width="1440" alt="UNDERFOOT_2" src="https://user-images.githubusercontent.com/109443641/225895627-e6c8bd5c-dd52-469f-8eed-e469bd9732f7.png">
-
-<img width="1440" alt="UNDERFOOT_3" src="https://user-images.githubusercontent.com/109443641/225895633-d6561a2c-53ba-4474-9974-60c0294fb344.png">
-
-<img width="1440" alt="UNDERFOOT_4" src="https://user-images.githubusercontent.com/109443641/225895637-2fd87335-8c7a-44b6-9b82-d6dab526d353.png">
 --- 
 
  ## 프로젝트 리뷰 / Project Review
