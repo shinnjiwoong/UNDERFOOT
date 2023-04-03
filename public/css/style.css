@@ -34,6 +34,7 @@
     --text-color-1 : #0F0F0F;
     --text-color-2 : #f1f1f1;
     --main-bg : #c8c7c7;
+    --main-highlight: #0015ff;
 }
 
 
@@ -152,7 +153,7 @@ a{
 
 .header-content:hover {
     /* background-color: #dbd8d8; */
-    color: #ff72b6;
+    color: white;
     cursor: grab;
 }
 #header-merch{
@@ -376,12 +377,14 @@ a{
     border-right: solid 1px #020202;
 }
 .member-content-wrapper:hover{
-    background-color:#fdd3f6;
+    background-color: var(--main-highlight);
 }
 .member-content-wrapper:hover .member-profile-img{
     filter: grayscale(0%);
 }
-
+.member-content-wrapper:hover .member-description-name{
+    color: white;
+}
 #member-reversed{
     flex-direction: row-reverse;
 
@@ -498,8 +501,9 @@ a{
     border: none;
 } */
 .project-selected{
-    height: 700px;
-    background-color: rgb(218, 218, 218);
+    height: max-content;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
 }
 .works-project-header-wrapper{
     display: flex;
@@ -510,11 +514,11 @@ a{
     transition: all 0.1s ease-in-out;
 }
 .works-project-header-wrapper:hover{
-    background-color: #fdd3f6;
+    background-color: var(--main-highlight);
     cursor: grab;
 }
 .works-project-header-wrapper:hover .works-project-title{
-    color: #000000;
+    color: white;
 }
 .works-project-title{
     padding: 10px 20px;
@@ -537,34 +541,37 @@ a{
 
 }
 .works-project-sourceWrapper{
-    display: block;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
 .works-media-wrapper{
-    width: 100%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .works-project-img{
-    width: 30%;
+    width: 70%;
     max-width: 100%;
     height: 70%;
     padding: 30px;
 }
 .works-project-vid{
-    width: 50%;
+    width: 100%;
     max-width: 100%;
     height: 100%;
     padding: 30px;
 }
 
 .works-project-description-wrapper{
-    width: 100%;
+    width: 50%;
     display: block;
     /* margin: auto; */
     margin: auto;
+    
 }
 .works-project-description{
     font-family: 'Gothic A1', sans-serif;
@@ -577,31 +584,48 @@ a{
 .works-project-credit-list{
     /* margin-top: 20px; */
 }
-.works-project-credit{
-    border-top: solid 1px black;
+
+.works-project-credit-scope{
     line-height: 150%;
     list-style-type : none;
-    font-size: 160%;
-    font-weight: normal;
+    font-size: 300%;
+    font-weight: bold;
     word-break: keep-all;
     color: var(--text-color-1);
+    text-decoration: underline 1.5px black;
     text-align: center;
 }
-.works-project-credit:last-child{
-    border-bottom: solid 1px black;
+.works-project-credit{
+    padding: 5px;
+    list-style-type : none;
+    font-size: 170%;
+    font-weight: bold;
+    text-align: center;
 }
 .works-project-links-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     padding-top: 30px;
 }
+.works-project-link{
+    display: block;
+    font-size: 250%;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.works-project-link:hover{
+    text-decoration: underline;
+    color: #0015ff;
+}
 .fa-brands{
-    font-size: 200%;
+    font-size: 300%;
     margin-right: 10px;
     color: var(--text-color-1);
 }
 .fa-brands:hover{
-    color:#ff72b6;
+    color:white;
 }
 #footer{
 
@@ -789,12 +813,21 @@ a{
         border-left: solid 1px #020202;
         border-right: solid 1px #020202;
     }
+    .works-project-wrapper{
+        width: 100%;
+        border-bottom: solid 2px var(--text-color-1);
+        border-left: none;
+        border-right: none;
+    }
     .works-project-header-wrapper
     :nth-child(2){
         display: none;
     }
     .works-project-sourceWrapper{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .works-media-wrapper{
         width: 100vw;
@@ -804,7 +837,7 @@ a{
         align-items: center;
     }
     .project-selected{
-        height: 720px;
+        height: max-content;
     }
     .works-project-description-wrapper{
         width: 100%;
@@ -823,8 +856,9 @@ a{
         margin-top: 20px;
     }
     .works-project-credit{
-        font-size: 100%;
+        font-size: 150%;
         text-align: center;
+        padding-bottom: 20px;
     }
     .works-project-links-wrapper{
         display: flex;
@@ -848,7 +882,7 @@ a{
     }
     
 }
-@media (max-width: 400px){
+@media (max-width: 800px){
     #main__title{
         font-family: 'Highway Gothic';
         /* letter-spacing: 30px; */
@@ -893,7 +927,8 @@ a{
         /* border-radius: 100%; */
     }
     #about-description-left-wrapper{
-        height: 50vh;
+        width: 100%;
+        height: 100%;
     }
     #about-description-text{
         font-size: 100%;
@@ -902,18 +937,36 @@ a{
         width: 100%;
         height: 100%;
     }
+    .members-title-bottom, .works-title-bottom{
+        font-weight: bold;
+    }
     .member-img-wrapper{
         width: 300px;
         height: 300px;
     }
     .member-description-name{
-        font-family: 'Highway Gothic';
         font-size: 200%;
         color: var(--text-color-1);
-        font-weight: 100;
+        font-weight: bold;
+    }
+    .about-def-text{
+        font-size: 200%;
+        padding: none;
+    }
+    #about-logo{
+        width: 70%;
+    }
+    .works-project-wrapper{
+        width: 100%;
+        border-bottom: solid 2px var(--text-color-1);
+        border-left: none;
+        border-right: none;
+        height: 75px;
+        overflow-y: hidden;
+        transition: all 0.5s ease-in-out;
     }
     .works-project-title{
-        font-size: 200%;
+        font-size: 150%;
     }
     .works-media-wrapper{
         width: 100vw;
@@ -936,8 +989,9 @@ a{
     }
     .works-project-credit{
         text-align: center;
-        font-size: 120%;
+        font-size: 150%;
         border: none;
+        padding-bottom: 15px;
     }
     .works-project-credit:last-child{
         text-align: center;
@@ -945,6 +999,6 @@ a{
         border: none;
     }
     .project-selected{
-        height: 600px;
+        height: max-content;
     }
 }
